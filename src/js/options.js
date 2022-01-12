@@ -20,45 +20,43 @@ export default (options) => {
             {
                 text: '下载',
                 click: (player) => {
-                    console.log(player);
-                    window.open(options.video.url);
+                    window.open(player.video.currentSrc);
                 },
             },
             {
                 text: '使用 PotPlayer 打开',
-                click: () => {
-                    window.location = 'potplayer://' + options.video.url;
+                click: (player) => {
+                    window.location = 'potplayer://' + player.video.currentSrc;
                 },
             },
             {
                 text: '使用 IINA 打开',
-                click: () => {
-                    console.log('iina://weblink?url=' + options.video.url);
-                    window.location = 'iina://weblink?url=' + options.video.url;
+                click: (player) => {
+                    window.location = 'iina://weblink?url=' + player.video.currentSrc;
                 },
             },
             {
                 text: '使用 VLC 打开',
-                click: () => {
-                    window.location = 'vlc://' + options.video.url;
+                click: (player) => {
+                    window.location = 'vlc://' + player.video.currentSrc;
                 },
             },
             {
                 text: '使用 nPlayer 打开',
-                click: () => {
-                    window.location = 'nplayer-' + options.video.url;
+                click: (player) => {
+                    window.location = 'nplayer-' + player.video.currentSrc;
                 },
             },
             {
                 text: '使用 MXPlayer(Free) 打开',
-                click: () => {
-                    window.location = 'intent:' + options.video.url + '#Intent;package=com.mxtech.videoplayer.ad;S.title=video;end';
+                click: (player) => {
+                    window.location = 'intent:' + player.video.currentSrc + '#Intent;package=com.mxtech.videoplayer.ad;S.title=video;end';
                 },
             },
             {
                 text: '使用 MXPlayer(Pro) 打开',
-                click: () => {
-                    window.location = 'intent:' + options.video.url + '#Intent;package=com.mxtech.videoplayer.pro;S.title=video;end';
+                click: (player) => {
+                    window.location = 'intent:' + player.video.currentSrc + '#Intent;package=com.mxtech.videoplayer.pro;S.title=video;end';
                 },
             },
         ],
