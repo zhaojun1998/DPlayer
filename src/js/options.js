@@ -16,6 +16,52 @@ export default (options) => {
         preload: 'metadata',
         volume: 0.7,
         playbackSpeed: [0.5, 0.75, 1, 1.25, 1.5, 2],
+        external: [
+            {
+                text: '下载',
+                click: (player) => {
+                    console.log(player);
+                    window.open(options.video.url);
+                },
+            },
+            {
+                text: '使用 PotPlayer 打开',
+                click: () => {
+                    window.location = 'potplayer://' + options.video.url;
+                },
+            },
+            {
+                text: '使用 IINA 打开',
+                click: () => {
+                    console.log('iina://weblink?url=' + options.video.url);
+                    window.location = 'iina://weblink?url=' + options.video.url;
+                },
+            },
+            {
+                text: '使用 VLC 打开',
+                click: () => {
+                    window.location = 'vlc://' + options.video.url;
+                },
+            },
+            {
+                text: '使用 nPlayer 打开',
+                click: () => {
+                    window.location = 'nplayer-' + options.video.url;
+                },
+            },
+            {
+                text: '使用 MXPlayer(Free) 打开',
+                click: () => {
+                    window.location = 'intent:' + options.video.url + '#Intent;package=com.mxtech.videoplayer.ad;S.title=video;end';
+                },
+            },
+            {
+                text: '使用 MXPlayer(Pro) 打开',
+                click: () => {
+                    window.location = 'intent:' + options.video.url + '#Intent;package=com.mxtech.videoplayer.pro;S.title=video;end';
+                },
+            },
+        ],
         apiBackend: defaultApiBackend,
         video: {},
         contextmenu: [],

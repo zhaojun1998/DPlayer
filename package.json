@@ -1,5 +1,5 @@
 {
-    "name": "dplayer",
+    "name": "dplayer-zfile",
     "version": "1.26.0",
     "description": "Wow, such a lovely HTML5 danmaku video player",
     "main": "dist/DPlayer.min.js",
@@ -18,7 +18,7 @@
         "dist"
     ],
     "repository": {
-        "url": "git+https://github.com/DIYgod/DPlayer.git",
+        "url": "git+https://github.com/zhaojun1998/DPlayer.git",
         "type": "git"
     },
     "keywords": [

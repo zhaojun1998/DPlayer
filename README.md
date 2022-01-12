@@ -1,3 +1,18 @@
+## 修改内容
+
+修改内容用于 [ZFile](https://github.com/zhaojun1998/zfile) 项目中在线预览播放器使用。
+
+-   支持调用外部播放器打开
+    -   直接下载
+    -   PotPlayer
+    -   IINA
+    -   VLC
+    -   nPlayer
+    -   MXPlayer (Free)
+    -   MXPlayer (Pro)
+
+###
+
 <p align="center">
 <img src="https://i.imgur.com/LnPvZvO.png" alt="ADPlayer" width="100">
 </p>
@@ -64,7 +79,6 @@ Using DPlayer on your project? [Let me know!](https://github.com/DIYgod/DPlayer/
 
 | [极酷社](https://www.acg.app) |
 | :---------------------------: |
-
 
 ### Contributors
 

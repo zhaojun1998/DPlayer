@@ -98,6 +98,18 @@
         {{ /if }}
     </div>
     <div class="dplayer-icons dplayer-icons-right">
+        <div class="dplayer-external">
+            <button title='使用本地播放器打开' class="dplayer-icon dplayer-external-icon" data-balloon="{{ tran('External') }}" data-balloon-pos="up">
+                <span class="dplayer-icon-content">{{@ icons.external }}</span>
+            </button>
+            <div class="dplayer-external-box">
+                {{ each options.external }}
+                    <div class="dplayer-external-item" data-speed="{{ $value.text }}">
+                        <span class="dplayer-label">{{ $value.text }}</span>
+                    </div>
+                {{ /each }}
+            </div>
+        </div>
         {{ if options.video.quality }}
         <div class="dplayer-quality">
             <button class="dplayer-icon dplayer-quality-icon">{{ options.video.quality[options.video.defaultQuality].name }}</button>
